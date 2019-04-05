@@ -1,0 +1,26 @@
+mat-toolbar {
+  background-color: black;
+  display: flex;
+  align-content: right;
+}
+.headline{
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  font-size: 28px;
+}
+.spacer{
+  flex: 1 1 auto;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+}
+li{
+  margin: 5px;
+}
+button{
+  font-size: 15px;
+  font-family: 'EB Garamond', serif;
+}
+

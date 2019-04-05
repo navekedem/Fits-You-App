@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.sidenav {
+  background-color: green;
+  width: 20%;
+}
+.routing {
+  width: 80%;
+}

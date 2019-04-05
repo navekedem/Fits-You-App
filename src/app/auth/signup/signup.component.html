@@ -1,0 +1,17 @@
+<mat-card>
+  <form (ngSubmit)="addUser(userForm)" #userForm="ngForm">
+    <mat-form-field>
+      <input type="email" matInput color="accent" name="email" ngModel #email="ngModel" placeholder="Email"  required/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="User Name" name="userName" ngModel #userName="ngModel" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" ngModel #password="ngModel"  name="password" required />
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Sign Up</button>
+  </form>
+</mat-card>
