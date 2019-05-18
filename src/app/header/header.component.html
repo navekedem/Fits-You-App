@@ -3,11 +3,18 @@
     <span class="headline">Fits-You</span>
     <span class="spacer"></span>
     <ul>
-      <li>
-        <a mat-fab routerLink="/login" color="green">Login</a>
+      <li *ngIf="!isOnline">
+        <a mat-fab routerLink="/login"   color="green">Login</a>
       </li>
-      <li>
-        <a mat-fab routerLink="/signup" color="primary">Sign Up</a>
+      <li *ngIf="!isOnline">
+        <a mat-fab routerLink="/signup"  color="primary">Sign Up</a>
+      </li>
+      <li *ngIf="isOnline">
+        <a mat-fab routerLink="/mysize"   color="primary">MySize</a>
+
+      </li>
+      <li *ngIf="isOnline">
+        <a mat-fab (click)="logOut()"  color="primary">Log Out</a>
       </li>
     </ul>
   </mat-toolbar>

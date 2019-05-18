@@ -1,0 +1,74 @@
+<form (ngSubmit)="saveSize(sizeForm)" #sizeForm="ngForm">
+  <div class="headline">
+    <h2>
+      Please enter your sizes for matching!
+    </h2>
+  </div>
+  <div class="main">
+
+    <div class="box">
+      <h3>Total</h3>
+      <div>
+        <mat-form-field color="accent" appearance="outline">
+          <mat-label>Height</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Height" name="Height" [(ngModel)]="height" required #Height="ngModel"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field color="accent" appearance="outline">
+          <mat-label>Weight</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Weight" name="Weight" [(ngModel)]="weight" required #Weight="ngModel" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="vertical-row"></div>
+    <div class="box">
+      <h3>Body Size</h3>
+      <div>
+        <mat-form-field  appearance="outline">
+          <mat-label>Body Length</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Body Length" name="BodyLength" [(ngModel)]="bodyLength" required #BodyLength="ngModel" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Bust</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Bust" name="Bust" [(ngModel)]="bust" required #Bust="ngModel"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Shoulder</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Shoulder" name="Shoulder" [(ngModel)]="shoulder" required #Shoulder="ngModel" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Sleeves</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Sleeves" name="Sleeves" [(ngModel)]="sleeves" required #Sleeves="ngModel"  />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="vertical-row"></div>
+    <div class="box">
+      <h3>Legs Size</h3>
+      <div>
+        <mat-form-field color="Surface" appearance="outline">
+          <mat-label color="Surface">Legs Length</mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" color="Surface" placeholder="Legs Length" name="LegsLength" [(ngModel)]="legsLength" required #LegsLength="ngModel" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field color="Surface" appearance="outline">
+          <mat-label>Hip </mat-label>
+          <input matInput type="number"  min="0" [disabled]="isEnabled" placeholder="Hip" name="Hip" [(ngModel)]="hip" required #Hip="ngModel" />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button type="button" class="btnEdit" *ngIf="userHaveSize" mat-raised-button (click)="openEdit()" color="Surface">Edit</button>
+    <button class="btnSave" *ngIf="userHaveSize && !isEnabled" mat-raised-button type="submit" color="accent">Save</button>
+    <button class="btnSave" *ngIf="!userHaveSize" mat-raised-button  type="submit" color="accent">Add Size</button>
+  </div>
+</form>

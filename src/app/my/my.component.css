@@ -1,0 +1,33 @@
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(130, 135, 136, 0.349);
+}
+.headline{
+
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+.box {
+  margin: 4%;
+
+}
+.box > h3 {
+  color: olive;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  text-align: center;
+}
+.vertical-row {
+  float: left;
+  height: 500px;
+  width: 2px; /* edit this if you want */
+  background-color: black;
+}
+.buttons{
+  float: center;
+}
+
+.btnSave{
+ margin: 10px;
+}

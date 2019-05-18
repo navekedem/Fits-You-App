@@ -1,0 +1,33 @@
+<div class="main">
+  <form [formGroup]="pantsForm" (ngSubmit)="onFormSubmit()">
+    <div>
+      <h2>Fit The Pants</h2>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Pants Length</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="pantsLength"
+          placeholder="Pants Length"
+          min="0"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Hip Line</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="hipLine"
+          placeholder="Hip Line"
+          min="0"
+        />
+      </mat-form-field>
+    </div>
+
+    <button type="submit" mat-stroked-button color="primary">Fit</button>
+  </form>
+</div>

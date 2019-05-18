@@ -3,7 +3,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule }  from '@angular/forms';
 import { MatSidenavModule }  from '@angular/material/sidenav';
-import { MatButtonModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatNativeDateModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { PantsComponent } from './clothes-com/pants/pants.component';
@@ -19,6 +20,7 @@ import { CoatComponent } from './clothes-com/coat/coat.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MyComponent } from './my/my.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     CoatComponent,
     SignupComponent,
     LoginComponent,
+    MyComponent,
 
   ],
   imports: [
@@ -44,7 +47,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

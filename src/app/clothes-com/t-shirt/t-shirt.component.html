@@ -1,0 +1,56 @@
+<div class="main">
+  <form [formGroup]="shirtForm" (ngSubmit)="onFormSubmit()">
+    <div>
+      <h2>Fit The Shirt</h2>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Body Length</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="bodyLength"
+          placeholder="Body Length"
+          min="0"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Bust</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="bust"
+          placeholder="Bust"
+          min="0"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Shoulder</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="shoulder"
+          placeholder="Shoulder"
+          min="0"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Sleeves</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="sleeves"
+          placeholder="Sleeves"
+          min="0"
+        />
+      </mat-form-field>
+    </div>
+    <button type="submit" mat-stroked-button color="primary">Fit</button>
+  </form>
+</div>
